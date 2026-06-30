@@ -106,8 +106,38 @@
         });
     }
 
-    /* ---- WHATSAPP FLOAT VISIBILITY ----
-       Oculta el botón flotante en el hero, lo muestra después */
+    /* ---- WHATSAPP DEEP LINK ----
+       Fuerza apertura directa de WhatsApp (normal o Business) 
+       usando el esquema whatsapp:// */
+    function initWhatsappLinks() {
+        var waLinks = document.querySelectorAll('a[href*="api.whatsapp.com"]');
+
+        waLinks.forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                var url = new URL(this.href);
+                var phone = url.searchParams.get('phone');
+                var text = url.searchParams.get('text') || '';
+
+                // Intentar abrir con esquema directo (funciona con ambas apps)
+                var intentUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(text);
+                var deepLink = 'whatsapp://send?phone=' + phone + '&text=' + encodeURIComponent(text);
+
+                // En móvil, intentar deep link primero
+                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                    window.location.href = deepLink;
+                    // Fallback si no abre en 1.5s
+                    setTimeout(function () {
+                        window.open(intentUrl, '_blank');
+                    }, 1500);
+                } else {
+                    // En desktop, abrir WhatsApp Web
+                    window.open('https://web.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(text), '_blank');
+                }
+            });
+        });
+    }
     function initWhatsappFloat() {
         var floatBtn = document.querySelector('.whatsapp-float');
         if (!floatBtn) return;
@@ -136,6 +166,7 @@
         initSmoothScroll();
         initNavbarScroll();
         initParallax();
+        initWhatsappLinks();
         initWhatsappFloat();
     }
 
