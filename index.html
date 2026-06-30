@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>GioTech Ingeniería | Desarrollo Web, Cámaras de Seguridad y Soporte Técnico en Villavicencio</title>
+    <meta name="description" content="GioTech Ingeniería - Soluciones tecnológicas para empresas y hogares en Villavicencio, Meta. Desarrollo web, instalación de cámaras de seguridad y soporte técnico profesional. Contacta por WhatsApp.">
+    <meta name="keywords" content="desarrollo web villavicencio, cámaras de seguridad villavicencio, soporte técnico, páginas web, videovigilancia, GioTech Ingeniería, George Moreno">
+    <meta name="author" content="George Moreno - GioTech Ingeniería">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GioTech Ingeniería | Soluciones Tecnológicas Integrales">
+    <meta property="og:description" content="Desarrollo web, cámaras de seguridad y soporte técnico profesional en Villavicencio, Meta. Contacta a George Moreno.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yorchmoreno.github.io/GioTechIngenieria/image/logo_1.png">
+    <meta property="og:locale" content="es_CO">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GioTech Ingeniería | Soluciones Tecnológicas">
+    <meta name="twitter:description" content="Desarrollo web, cámaras de seguridad y soporte técnico profesional en Villavicencio.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yorchmoreno.github.io/GioTechIngenieria/image/logo_1.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR
+    ============================================ -->
+    <nav class="navbar-giotech" aria-label="Navegación principal">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="#hero" class="d-flex align-items-center text-decoration-none gap-2">
+                    <img src="https://yorchmoreno.github.io/GioTechIngenieria/image/logo_1.png" 
+                         alt="Logo GioTech Ingeniería" 
+                         class="navbar-logo-img"
+                         width="52" height="52">
+                    <span class="navbar-brand-text d-none d-sm-inline">GioTech Ingeniería</span>
+                </a>
+                <a href="https://wa.me/573502837223?text=Hola%2C%20vi%20tu%20tarjeta%20de%20presentaci%C3%B3n%20y%20quiero%20una%20cotizaci%C3%B3n." 
+                   class="btn-whatsapp btn-nav"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Solicitar cotización por WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                    <span class="d-none d-md-inline">Cotizar</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+    ============================================ -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="hero-badge">
+                        <i class="bi bi-geo-alt-fill"></i> Villavicencio, Meta
+                    </div>
+                    <h1 class="hero-title">
+                        Soluciones <span class="gradient-text">Tecnológicas</span> para Empresas y Hogares
+                    </h1>
+                    <p class="hero-subtitle">
+                        Desarrollo Web, Cámaras de Seguridad y Soporte Técnico.<br>
+                        Impulsa tu negocio con tecnología profesional y confiable.
+                    </p>
+                    <div class="hero-author">
+                        <span class="author-name">George Moreno</span>
+                        <span class="author-separator">|</span>
+                        <span class="author-role">Ingeniero de Sistemas</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/573502837223?text=Hola%20George%2C%20vi%20tu%20tarjeta%20de%20presentaci%C3%B3n%20y%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." 
+                           class="btn-whatsapp btn-hero"
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Solicitar cotización por WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                            Solicitar Cotización por WhatsApp
+                        </a>
+                        <a href="#servicios" class="btn-outline-giotech">
+                            <i class="bi bi-arrow-down-circle"></i> Ver Servicios
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="hero-visual">
+                        <div class="hero-photo-wrapper">
+                            <img src="george.jpeg" 
+                                 alt="George Moreno - Ingeniero de Sistemas" 
+                                 class="hero-photo"
+                                 width="320" height="320">
+                            <div class="hero-photo-icons" aria-hidden="true">
+                                <div class="float-icon icon-code"><i class="bi bi-code-slash"></i></div>
+                                <div class="float-icon icon-camera"><i class="bi bi-camera-video"></i></div>
+                                <div class="float-icon icon-support"><i class="bi bi-headset"></i></div>
+                                <div class="float-icon icon-shield"><i class="bi bi-shield-check"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         POR QUÉ ELEGIRNOS
+    ============================================ -->
+    <section id="por-que" class="section-pad bg-secondary-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">¿Por qué <span class="gradient-text">elegirnos</span>?</h2>
+                <p class="section-subtitle">Compromiso, calidad y tecnología en cada proyecto.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="bi bi-person-check"></i></div>
+                        <h3 class="feature-title">Atención personalizada</h3>
+                        <p class="feature-desc">Cada proyecto es único. Te acompañamos desde la idea hasta la entrega final.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="bi bi-puzzle"></i></div>
+                        <h3 class="feature-title">Soluciones a la medida</h3>
+                        <p class="feature-desc">No usamos plantillas genéricas. Creamos lo que tu negocio realmente necesita.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="bi bi-cpu"></i></div>
+                        <h3 class="feature-title">Tecnología moderna</h3>
+                        <p class="feature-desc">Usamos las herramientas y técnicas más actuales del mercado.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="bi bi-patch-check"></i></div>
+                        <h3 class="feature-title">Calidad garantizada</h3>
+                        <p class="feature-desc">Cada entrega cumple estándares profesionales de rendimiento y diseño.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="bi bi-headset"></i></div>
+                        <h3 class="feature-title">Soporte confiable</h3>
+                        <p class="feature-desc">Estamos contigo después de la entrega. Soporte real cuando lo necesites.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="bi bi-heart"></i></div>
+                        <h3 class="feature-title">Compromiso total</h3>
+                        <p class="feature-desc">Tu éxito es nuestro éxito. Trabajamos con dedicación y responsabilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICIOS
+    ============================================ -->
+    <section id="servicios" class="section-pad">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nuestros <span class="gradient-text">Servicios</span></h2>
+                <p class="section-subtitle">Soluciones integrales de tecnología para tu empresa o negocio.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Desarrollo Web -->
+                <div class="col-lg-4">
+                    <div class="service-card" data-reveal>
+                        <div class="service-icon service-icon-web">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h3 class="service-title">Desarrollo Web</h3>
+                        <p class="service-desc">
+                            Diseño y desarrollo de páginas web modernas, rápidas, responsivas y optimizadas 
+                            para posicionar tu marca en internet.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Diseño 100% personalizado</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Optimización SEO</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Compatible con todos los dispositivos</li>
+                        </ul>
+                        <a href="https://wa.me/573502837223?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Desarrollo%20Web.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." 
+                           class="btn-service"
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp"></i> Solicitar información
+                        </a>
+                    </div>
+                </div>
+                <!-- Cámaras de Seguridad -->
+                <div class="col-lg-4">
+                    <div class="service-card" data-reveal>
+                        <div class="service-icon service-icon-cam">
+                            <i class="bi bi-camera-video"></i>
+                        </div>
+                        <h3 class="service-title">Cámaras de Seguridad</h3>
+                        <p class="service-desc">
+                            Venta, instalación, configuración y mantenimiento de sistemas de videovigilancia 
+                            para negocios y hogares.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Cámaras HD / 4K</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Monitoreo remoto 24/7</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Grabación y alertas inteligentes</li>
+                        </ul>
+                        <a href="https://wa.me/573502837223?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20C%C3%A1maras%20de%20Seguridad.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." 
+                           class="btn-service"
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp"></i> Solicitar información
+                        </a>
+                    </div>
+                </div>
+                <!-- Soporte Técnico -->
+                <div class="col-lg-4">
+                    <div class="service-card" data-reveal>
+                        <div class="service-icon service-icon-support">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h3 class="service-title">Soporte Técnico</h3>
+                        <p class="service-desc">
+                            Mantenimiento preventivo y correctivo de computadores, instalación de software, 
+                            redes y asesoría tecnológica.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Mantenimiento de equipos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Redes y conectividad</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Atención presencial o remota</li>
+                        </ul>
+                        <a href="https://wa.me/573502837223?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Soporte%20T%C3%A9cnico.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." 
+                           class="btn-service"
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="bi bi-whatsapp"></i> Solicitar información
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- CTA después de servicios -->
+            <div class="text-center mt-5">
+                <a href="https://wa.me/573502837223?text=Hola%20George%2C%20vi%20tu%20tarjeta%20y%20quiero%20cotizar%20un%20servicio." 
+                   class="btn-whatsapp btn-hero"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Solicitar cotización por WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                    Solicitar Cotización por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROYECTOS
+    ============================================ -->
+    <section id="proyectos" class="section-pad bg-secondary-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nuestros <span class="gradient-text">Proyectos</span></h2>
+                <p class="section-subtitle">Algunos trabajos que reflejan nuestra calidad y compromiso.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card" data-reveal>
+                        <div class="project-img">
+                            <div class="project-placeholder">
+                                <i class="bi bi-globe"></i>
+                                <span>Proyecto Web</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">Página Web Corporativa</h4>
+                            <p class="project-desc">Diseño y desarrollo de sitio web profesional para empresa local.</p>
+                            <span class="project-tag">Desarrollo Web</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card" data-reveal>
+                        <div class="project-img">
+                            <div class="project-placeholder">
+                                <i class="bi bi-camera-video"></i>
+                                <span>Videovigilancia</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">Sistema CCTV Comercial</h4>
+                            <p class="project-desc">Instalación de 8 cámaras HD con monitoreo remoto para local comercial.</p>
+                            <span class="project-tag tag-cam">Cámaras</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card" data-reveal>
+                        <div class="project-img">
+                            <div class="project-placeholder">
+                                <i class="bi bi-pc-display"></i>
+                                <span>Soporte TI</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 class="project-title">Infraestructura de Red</h4>
+                            <p class="project-desc">Configuración de red empresarial con cableado estructurado y WiFi.</p>
+                            <span class="project-tag tag-support">Soporte</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-muted-custom">
+                <small><i class="bi bi-info-circle"></i> Proyectos de ejemplo — Próximamente casos reales.</small>
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- ============================================
+         CTA FINAL
+    ============================================ -->
+    <section id="cta-final" class="cta-section">
+        <div class="container text-center">
+            <div class="cta-content" data-reveal>
+                <h2 class="cta-title">
+                    ¿Listo para llevar tu proyecto al <span class="gradient-text">siguiente nivel</span>?
+                </h2>
+                <p class="cta-subtitle">
+                    Cuéntanos qué necesitas y te asesoramos sin compromiso. Respuesta inmediata.
+                </p>
+                <a href="https://wa.me/573502837223?text=Hola%20George%2C%20quiero%20llevar%20mi%20proyecto%20al%20siguiente%20nivel.%20%C2%BFPodemos%20hablar%3F" 
+                   class="btn-whatsapp btn-cta"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Hablemos por WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                    Hablemos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer-giotech" role="contentinfo">
+        <div class="container text-center">
+            <img src="https://yorchmoreno.github.io/GioTechIngenieria/image/logo_1.png" 
+                 alt="Logo GioTech Ingeniería" 
+                 class="footer-logo-img mb-3"
+                 width="68" height="68">
+            <p class="footer-brand">GioTech Ingeniería</p>
+            <p class="footer-text">Villavicencio - Meta, Colombia</p>
+            <a href="https://wa.me/573502837223?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20GioTech." 
+               class="btn-whatsapp btn-footer mt-3"
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Contactar por WhatsApp">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://yorchmoreno.github.io/GioTechIngenieria/" 
+               class="btn-outline-giotech btn-footer mt-2"
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Visitar página principal">
+                <i class="bi bi-globe"></i> Página Principal
+            </a>
+            <p class="footer-copy">
+                © 2026 GioTech Ingeniería. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         BOTÓN FLOTANTE WHATSAPP
+    ============================================ -->
+    <a href="https://wa.me/573502837223?text=Hola%2C%20vi%20tu%20tarjeta%20y%20quiero%20informaci%C3%B3n%20sobre%20tus%20servicios." 
+       class="whatsapp-float"
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
