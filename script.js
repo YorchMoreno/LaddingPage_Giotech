@@ -107,9 +107,9 @@
     }
 
     /* ---- WHATSAPP DEEP LINK ----
-       Fuerza apertura directa de WhatsApp (normal o Business)
-       Usa intent:// en Android para mostrar selector de app
-       En iOS usa el link universal que funciona con ambas */
+       Compatible con WhatsApp normal Y WhatsApp Business.
+       No especifica paquete para que Android elija la app disponible.
+       Si el usuario tiene ambas, Android muestra el selector. */
     function initWhatsappLinks() {
         var waLinks = document.querySelectorAll('a[href*="api.whatsapp.com"]');
 
@@ -127,20 +127,13 @@
                 var isIOS = /iPhone|iPad|iPod/i.test(userAgent);
 
                 if (isAndroid) {
-                    // Intent Android: abre selector si hay ambas apps
-                    var intentUrl = 'intent://send?phone=' + phone + '&text=' + encodedText + '#Intent;scheme=whatsapp;package=com.whatsapp;end';
+                    // Sin package= para que Android elija entre WhatsApp o Business
+                    var intentUrl = 'intent://send?phone=' + phone + '&text=' + encodedText 
+                        + '#Intent;scheme=whatsapp;S.browser_fallback_url=https%3A%2F%2Fwa.me%2F' + phone + '%3Ftext%3D' + encodedText + ';end';
                     window.location.href = intentUrl;
-
-                    // Fallback: intentar con WhatsApp Business si no abre
-                    setTimeout(function () {
-                        var intentBiz = 'intent://send?phone=' + phone + '&text=' + encodedText + '#Intent;scheme=whatsapp;package=com.whatsapp.w4b;end';
-                        window.location.href = intentBiz;
-                    }, 800);
                 } else if (isIOS) {
-                    // iOS: usar link universal
                     window.location.href = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodedText;
                 } else {
-                    // Desktop: WhatsApp Web
                     window.open('https://web.whatsapp.com/send?phone=' + phone + '&text=' + encodedText, '_blank');
                 }
             });
