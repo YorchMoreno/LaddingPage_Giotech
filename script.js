@@ -107,8 +107,9 @@
     }
 
     /* ---- WHATSAPP DEEP LINK ----
-       Fuerza apertura directa de WhatsApp (normal o Business) 
-       usando el esquema whatsapp:// */
+       Fuerza apertura directa de WhatsApp (normal o Business)
+       Usa intent:// en Android para mostrar selector de app
+       En iOS usa el link universal que funciona con ambas */
     function initWhatsappLinks() {
         var waLinks = document.querySelectorAll('a[href*="api.whatsapp.com"]');
 
@@ -119,21 +120,28 @@
                 var url = new URL(this.href);
                 var phone = url.searchParams.get('phone');
                 var text = url.searchParams.get('text') || '';
+                var encodedText = encodeURIComponent(text);
 
-                // Intentar abrir con esquema directo (funciona con ambas apps)
-                var intentUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(text);
-                var deepLink = 'whatsapp://send?phone=' + phone + '&text=' + encodeURIComponent(text);
+                var userAgent = navigator.userAgent || '';
+                var isAndroid = /Android/i.test(userAgent);
+                var isIOS = /iPhone|iPad|iPod/i.test(userAgent);
 
-                // En móvil, intentar deep link primero
-                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                    window.location.href = deepLink;
-                    // Fallback si no abre en 1.5s
+                if (isAndroid) {
+                    // Intent Android: abre selector si hay ambas apps
+                    var intentUrl = 'intent://send?phone=' + phone + '&text=' + encodedText + '#Intent;scheme=whatsapp;package=com.whatsapp;end';
+                    window.location.href = intentUrl;
+
+                    // Fallback: intentar con WhatsApp Business si no abre
                     setTimeout(function () {
-                        window.open(intentUrl, '_blank');
-                    }, 1500);
+                        var intentBiz = 'intent://send?phone=' + phone + '&text=' + encodedText + '#Intent;scheme=whatsapp;package=com.whatsapp.w4b;end';
+                        window.location.href = intentBiz;
+                    }, 800);
+                } else if (isIOS) {
+                    // iOS: usar link universal
+                    window.location.href = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodedText;
                 } else {
-                    // En desktop, abrir WhatsApp Web
-                    window.open('https://web.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(text), '_blank');
+                    // Desktop: WhatsApp Web
+                    window.open('https://web.whatsapp.com/send?phone=' + phone + '&text=' + encodedText, '_blank');
                 }
             });
         });
